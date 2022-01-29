@@ -36,11 +36,13 @@ export default function Textforms(props) {
            let newtext='';
            settext(newtext);
            setoriginal(text);
+           props.showAlert("cleared text sucessfully","success");
     }
     
     const makeBold =() =>{
         
         settext(originaltext);
+        props.showAlert("Bolded","success");
 
 
     }
@@ -48,13 +50,15 @@ export default function Textforms(props) {
         
         document.getElementById("mybox").style.color="#042743";
         document.getElementById("mybox").style.background=arr[index];
-        index=(index+1)%n
+        index=(index+1)%n;
+        props.showAlert("hooo! background changed ","success");
     }
 
     const handlecopy= () => {
         var text=document.getElementById("mybox");
         text.select();
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Copied Sucessfullt!!","success");
     }
    
    const [text,settext]=useState('');
