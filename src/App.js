@@ -80,8 +80,8 @@ function App() {
     <div className="container">
       {/*<Textforms  showAlert={showAlert}  title="Text analysed" email="Enetr email" text="Text message" mode={mode}/>  */}
       <Routes>
-          <Route exact path="/about" element={<About/>}/>
-          <Route exact path="/home"  element={<Textforms  showAlert={showAlert}  title="Text analysed" email="Enetr email" text="Text message" mode={mode}/>}/>
+          <Route exact path="/about" element={<About mode={mode}/>}/>
+          <Route exact path="/home"  element={<Textforms  showAlert={showAlert} heading="word counter,character counter" title="Text analysed" email="Enetr email" text="Text message" mode={mode}/>}/>
          
         </Routes>
 
