@@ -44,6 +44,19 @@ export default function Navbar(props) {
   </div>    */}
 
   {/* added*/}
+
+    <div className="d-flex">
+     <div className="bg-primary rounded mx-3" onClick={()=>{props.togglemode('primary')}} style={{height:'20px',width:'25px',cursor:'pointer'}}></div>
+     <div className="bg-danger rounded mx-2" onClick={()=>{props.togglemode('danger')}} style={{height:'20px',width:'25px', cursor:'pointer'}}></div>
+     <div className="bg-success rounded mx-2" onClick={()=>{props.togglemode('success')}} style={{height:'20px',width:'25px', cursor:'pointer'}}></div>
+     <div className="bg-warning rounded mx-2" onClick={()=>{props.togglemode('warning')}} style={{height:'20px',width:'25px', cursor:'pointer'}}></div>
+     
+     
+
+     
+
+    
+
   <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
         <input className="form-check-input" type="checkbox" id="formSwitchDefault" onClick={props.togglemode}/>
         <label className="form-check-label" htmlFor="formSwitchDefault">{props.tmode}</label>
@@ -52,6 +65,7 @@ export default function Navbar(props) {
   {/* ended*/}
         
           </div>
+        </div>
         </div>
       </nav>
     )
